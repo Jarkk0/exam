@@ -5,7 +5,7 @@ let bodyParser = require('body-parser');
 let dbConfig = require('./database/db');
 
 // Express Route
-const studentRoute = require('../backend/routes/student.route')
+const userRoute = require('./routes/user.route')
 
 // Connecting mongoDB Database
 mongoose.Promise = global.Promise;
@@ -25,8 +25,8 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.use(cors());
-app.use('/students', studentRoute)
-
+app.use('/user',userRoute)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
 
 // PORT
 const port = process.env.PORT || 4000;
@@ -36,8 +36,8 @@ const server = app.listen(port, () => {
 
 // 404 Error
 app.use((req, res, next) => {
-  //next(createError(404));
-});
+  res.status(404).send("Sorry can't find that!")
+})
 
 app.use(function (err, req, res, next) {
   console.error(err.message);
