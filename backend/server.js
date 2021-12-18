@@ -5,6 +5,7 @@ let bodyParser = require('body-parser');
 let dbConfig = require('./database/db');
 
 // Express Route
+const codeRoute = require('./routes/code.route') //ad
 const userRoute = require('./routes/user.route')
 
 // Connecting mongoDB Database
@@ -25,6 +26,7 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.use(cors());
+app.use('/code',codeRoute)
 app.use('/user',userRoute)
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
 

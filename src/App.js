@@ -9,9 +9,14 @@ import './App.css'
 
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
-import CreateStudent from './components/create-student.component'
-import EditStudent from './components/edit-student.component'
-import StudentList from './components/student-list.component'
+import CreateUser from './components/create-user.component'
+import EditUser from './components/edit-user.component'
+import UserList from './components/user-list.component'
+import UserTableRow from './components/userTableRow'
+import CreateCode from './components/create-code.component'
+import ShowCode from './components/show-code.component'
+
+//require('dotenv').config();
 
 function App() {
   return (
@@ -21,21 +26,39 @@ function App() {
           <Navbar bg="dark" variant="dark">
             <Container>
               <Navbar.Brand>
-                <Link to={'/create-student'} className="nav-link">
-                  React MERN Stack App
+                <Link to={'/create-user'} className="nav-link">
+                  Ylivuotoputki, tänne kaikki postaukset
                 </Link>
               </Navbar.Brand>
 
               <Nav className="justify-content-end">
                 <Nav>
-                  <Link to={'/create-student'} className="nav-link">
-                    Create Student
+                  <Link to={'/create-user'} className="nav-link">
+                    Create User
                   </Link>
                 </Nav>
 
                 <Nav>
-                  <Link to={'/student-list'} className="nav-link">
-                    Student List
+                  <Link to={'/userTableRow'} className="nav-link">
+                    {/* Table */}
+                  </Link>
+                </Nav>
+
+                <Nav>
+                  <Link to={'/create-code'} className="nav-link">
+                    Create Code post
+                  </Link>
+                </Nav>
+
+                <Nav>
+                  <Link to={'/show-code'} className="nav-link">
+                    Show Code post
+                  </Link>
+                </Nav>
+
+                <Nav>
+                  <Link to={'/user-list'} className="nav-link">
+                    User List
                   </Link>
                 </Nav>
               </Nav>
@@ -51,22 +74,37 @@ function App() {
                   <Route
                     exact
                     path="/"
-                    component={(props) => <CreateStudent {...props} />}
+                    component={(props) => <CreateUser {...props} />}
                   />
                   <Route
                     exact
-                    path="/create-student"
-                    component={(props) => <CreateStudent {...props} />}
+                    path="/create-user"
+                    component={(props) => <CreateUser {...props} />}
                   />
                   <Route
                     exact
-                    path="/edit-student/:id"
-                    component={(props) => <EditStudent {...props} />}
+                    path="/edit-user/:id"
+                    component={(props) => <EditUser {...props} />}
                   />
                   <Route
                     exact
-                    path="/student-list"
-                    component={(props) => <StudentList {...props} />}
+                    path="/userTableRow/"
+                    component={(props) => <UserTableRow {...props} />}
+                  />
+                  <Route
+                    exact
+                    path="/create-code"
+                    component={(props) => <CreateCode {...props} />}
+                  /> 
+                  <Route
+                    exact
+                    path="/show-code"
+                    component={(props) => <ShowCode {...props} />}
+                  />
+                  <Route
+                    exact
+                    path="/user-list"
+                    component={(props) => <UserList {...props} />}
                   />
                 </Switch>
               </div>
