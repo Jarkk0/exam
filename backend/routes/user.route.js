@@ -2,7 +2,6 @@ let mongoose = require('mongoose'),
   express = require('express'),
   router = express.Router();
 
-  //const bcrypt = require("bcryptjs");
 // User Model
 let userSchema = require('../models/User');
 

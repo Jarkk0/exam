@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from 'axios';
 import Table from 'react-bootstrap/Table';
-import userTableRow from './userTableRow';
+
 
 
 export default class UserList extends Component {
@@ -23,12 +23,6 @@ export default class UserList extends Component {
       .catch((error) => {
         console.log(error);
       })
-  }
-
-  DataTable() {
-    return this.state.users.map((res, i) => {
-      return <userTableRow obj={res} key={i} />;
-    });
   }
 
 

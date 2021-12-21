@@ -5,7 +5,7 @@ let mongoose = require('mongoose'),
 // Codes Model
 let codeSchema = require('../models/Code');
 
-// CREATE Code //pitäää katsoa onko olemassa samaa idtä
+// CREATE Code post
 router.post('/create-code', (req, res, next) => {
   codeSchema.create(req.body, (error, data) => {
     if (error) {
@@ -50,5 +50,6 @@ router.route('/create-code/:id').put((req, res, next) => {
     }
   })
 })
+
 
 module.exports = router;
