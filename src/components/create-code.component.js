@@ -54,7 +54,7 @@ export default class CreateCode extends Component {
             <Form.Control type="textarea" rows="6" value={this.state.code} onChange={this.onChangeCode} />
           </Form.Group>
     
-          <Button variant="danger" size="lg" block="block" type="submit" className="mt-4">
+          <Button variant="success" size="lg" block="block" type="submit" className="mt-4">
             Create Code post
           </Button>
         </Form>

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from 'axios';
-import DataTable from './data-table'
+import CodeTable from './code-table'
+
 
 export default class ShowCode extends Component {
     constructor(props) {
@@ -18,24 +19,25 @@ export default class ShowCode extends Component {
             })
     }
 
-    dataTable() {
+    codeTable() {
         return this.state.codesCollection.map((data, i) => {
-            return <DataTable obj={data} key={i} />;
+            return <CodeTable obj={data} key={i} />;
         });
     }
+    
 
     render() {
         return (
             <div className="wrapper-users">
                 <div className="container">
-                    <table className="table table-striped table-dark">
-                        <thead className="thead-dark">
+                    <table className="table table-striped table-white">
+                        <thead className="thead-white">
                             <tr>
-                                <td>CODE</td>
+                                CODeE
                             </tr>
                         </thead>
                         <tbody>
-                            {this.dataTable()}
+                                {this.codeTable()}                           
                         </tbody>
                     </table>
                 </div>

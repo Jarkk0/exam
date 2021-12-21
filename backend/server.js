@@ -10,6 +10,12 @@ const codeRoute = require('./routes/code.route') //ad
 const userRoute = require('./routes/user.route')
 const commentRoute = require('./routes/comment.route')
 
+const auth = basicAuth({
+  users: {
+    admin: '123',
+    user: '456',
+  },
+});
 
 
 
@@ -49,7 +55,6 @@ app.get('/authenticate', auth, (req, res) => {
     res.send('user');
   }
 });
-
 
 // 404 Error
 app.use((req, res, next) => {

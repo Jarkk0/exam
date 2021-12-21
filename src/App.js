@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import Container from 'react-bootstrap/Container'
@@ -11,14 +11,12 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
 import CreateUser from './components/create-user.component'
 import EditUser from './components/edit-user.component'
-import UserList from './components/user-list.component'
-import UserTableRow from './components/userTableRow'
 import CreateCode from './components/create-code.component'
 import ShowCode from './components/show-code.component'
 
-//require('dotenv').config();
 
 function App() {
+ 
   return (
     <div className="App">
       <Router>
@@ -27,7 +25,7 @@ function App() {
             <Container>
               <Navbar.Brand>
                 <Link to={'/create-user'} className="nav-link">
-                  Ylivuotoputki, tänne kaikki postaukset
+                  Ylivuotoputki
                 </Link>
               </Navbar.Brand>
 
@@ -56,11 +54,7 @@ function App() {
                   </Link>
                 </Nav>
 
-                <Nav>
-                  <Link to={'/user-list'} className="nav-link">
-                    User List
-                  </Link>
-                </Nav>
+                
               </Nav>
             </Container>
           </Navbar>
@@ -85,12 +79,7 @@ function App() {
                     exact
                     path="/edit-user/:id"
                     component={(props) => <EditUser {...props} />}
-                  />
-                  <Route
-                    exact
-                    path="/userTableRow/"
-                    component={(props) => <UserTableRow {...props} />}
-                  />
+                  />                  
                   <Route
                     exact
                     path="/create-code"
@@ -101,11 +90,7 @@ function App() {
                     path="/show-code"
                     component={(props) => <ShowCode {...props} />}
                   />
-                  <Route
-                    exact
-                    path="/user-list"
-                    component={(props) => <UserList {...props} />}
-                  />
+                  
                 </Switch>
               </div>
             </Col>
