@@ -1,12 +1,22 @@
-# Getting Started with Create React App
+## Title: Ylivuotoputki
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Descrption
 
-## Available Scripts
+This program is my training to learn more about React and JavaScript. Its main idea is to create a platform where users can create Code posts and other users can comment posts. 
 
-In the project directory, you can run:
+## Technologies
 
-### `npm start`
+This program use MERN Stack, MongoDB document database, Express Node.js framework, React client-side JavaScript framework and Node the premier JavaScript web server. 
+
+## Future implementation
+
+Add some kind of authentication, so only user how is login can create new Code post. 
+
+## How to Install and Run the Project
+
+Front End:
+$ npm install 
+$ npm start
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -14,10 +24,16 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+Backend:
+This app backend run on MongoDB and you need install it. For example here you can find help how to install MongoDB https://docs.microsoft.com/fi-fi/windows/wsl/tutorials/wsl-database#install-mongodb
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Running server go to cd backend and then run command nodemon server.js
+
+$ npm install nodemon
+$ nodemon server.js
+
+Open [http://localhost:4000](http://localhost:4000) to view server on your browser.
+
 
 ### `npm run build`
 
@@ -28,17 +44,3 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-This app backend run on MongoDB and you need install it. For example here you can find help how to install MongoDB https://docs.microsoft.com/fi-fi/windows/wsl/tutorials/wsl-database#install-mongodb
-
-Running server go to cd backend and then run command nodemon server.js 
-
-Open [http://localhost:4000](http://localhost:4000) to view server on your browser.
-
-Grading:
-Basic features with well written documentation 25
-Use framework React 5
-Beautiful design and using Reactboostrap 5
-So total 35.
