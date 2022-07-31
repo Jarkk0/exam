@@ -8,6 +8,8 @@ This program is my training to learn more about React and JavaScript. Its main i
 
 This program use MERN Stack, MongoDB document database, Express Node.js framework, React client-side JavaScript framework and Node the premier JavaScript web server. 
 
+Why this project is make whit MERN stack? Mern stack is good, because it allows creation frontend, backend and database using JavaScript and JSON. MongoDB is designed to store JSON data so it useful when store both user data and some code and comments. React is JavaScript library and it helps development easily UI components. 
+
 ## Future implementation
 
 Add some kind of authentication, so only user how is login can create new Code post. 
@@ -45,3 +47,19 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### User manual
+
+* user can register with using name and email
+* user can make new code post
+* user can comment code post
+
+
+
+## Number of points
+- Basic features with well written documentation = authentication didn't work, so 22 points
+- Utilization of a frontside framework, such as React, but you can also use Angular, Vue or some other = I use React, so 5 points
+- Test software for accessibility; can it be used only with keyboard / voice command? Can screen readers work with your application? = User can use only keyboard and application work, so 3 points
+- Beautiful UI/UX, it is very simple to use and design is good, so 2 points
+
+Total poinst = 32 points!
